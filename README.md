@@ -42,6 +42,6 @@ double_anapest = [[anapest], [anapest, dactyl]]
 Currently the Hungarian alphabet has been set to it, but you could reconfigure it by changing the vowel and consonant lines.
 
 
-## Licence
+## License
 
 Licensed under MIT license.
