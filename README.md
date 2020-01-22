@@ -22,7 +22,7 @@ python morafinder.py
 New type of feet could be added easily. `s` stands for short syllabes `l` for long ones. A comment shows where to add it.
 
 ```
-anapest = "ssl"
+anapest = "μμ-"
 ```
 
 Then add a new line type where the comment says to.
