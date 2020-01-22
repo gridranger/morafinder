@@ -23,7 +23,7 @@ class NotEnoughFeet(RuntimeError):
     pass
 
 
-class HexameterChecker(object):
+class MoraFinder(object):
     long_vowels = ["Á", "É", "Í", "Ó", "Ő", "Ú", "Ű"]
     vowels = ["A", "Á", "E", "É", "I", "Í", "O", "Ó", "Ö", "Ő", "U", "Ú", "Ü", "Ű"]
     single_letter_consonants = ["B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z"]
@@ -108,7 +108,7 @@ class HexameterChecker(object):
 
 
 if __name__ == "__main__":
-    h = HexameterChecker()
+    h = MoraFinder()
     try:
         line = argv[1]
         print(line, end=" - ")

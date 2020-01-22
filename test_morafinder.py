@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 from unittest import TestCase
-from hexameterchecker import HexameterChecker, s, l, hexameter
+from morafinder import MoraFinder, s, l, hexameter
 
 __author__ = 'Bárdos Dávid'
 
 
-class TestHexameterChecker(TestCase):
+class TestMoraFinder(TestCase):
     def test_split_to_syllabes(self):
-        h = HexameterChecker()
+        h = MoraFinder()
         result = h.split_to_pseudosyllabes("alma a fa alatt")
         self.assertEqual(["ALM", "A", "AF", "A", "AL", "ATT"], result)
 
     def test_get_length(self):
-        h = HexameterChecker()
+        h = MoraFinder()
         self.assertEqual(l, h.get_length("ÚT"))
         self.assertEqual(l, h.get_length("ITT"))
         self.assertEqual(l, h.get_length("ITSZ"))
@@ -25,6 +25,6 @@ class TestHexameterChecker(TestCase):
     def test_check_line(self):
         sample = "Mért legyek én tisztességes? Kiterítenek úgyis!"
         # expected_result = "lss" + "ll" + "ll" + "lss" + "lss" + "ls"
-        h = HexameterChecker()
+        h = MoraFinder()
         result = h.check_line(sample)
         self.assertEqual(hexameter, result)
