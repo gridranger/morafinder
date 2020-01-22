@@ -12,9 +12,14 @@ python morafinder.py "my line to analyze"
 
 Or you may start it without argument to get prompted for line after line until you type `exit`.
 
+```
+python morafinder.py
+>>>
+```
+
 ## Extending by additional feet
 
-New type of feet could be added easily. `s` stands for short syllabe `l` for long
+New type of feet could be added easily. `s` stands for short syllabes `l` for long ones. A comment shows where to add it.
 
 ```
 anapest = "ssl"
@@ -26,7 +31,7 @@ Then add a new line type where the comment says to.
 double_anapest = [[anapest], [anapest]]
 ```
 
-In case some of the feet could be optionally replaced by another one. The following example shows how to mark, if the second anapest my be replaced by a dactyl.
+Multiple feet option could be also set. The following example shows how to mark, if the second anapest my be replaced by a dactyl.
 
 ```
 double_anapest = [[anapest], [anapest, dactyl]]
