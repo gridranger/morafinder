@@ -4,14 +4,16 @@ from sys import argv
 __author__ = 'Bárdos Dávid'
 l = "l"  # LONG
 s = "s"  # SHORT
-dactilus = "lss"
-spondeus = "ll"
-trocheus = "ls"
-jambus = "sl"
-hexameter = [[dactilus, spondeus], [dactilus, spondeus], [dactilus, spondeus], [dactilus, spondeus], [dactilus],
-             [spondeus, trocheus]]
-pentameter = [[dactilus, spondeus], [dactilus, spondeus], [l, s], [dactilus], [dactilus], [l, s]]
-pentameter_closure = [[dactilus], [dactilus], [l, s]]
+dactyl = "lss"
+spondee = "ll"
+trochee = "ls"
+iamb = "sl"
+# add new feet above this line
+hexameter = [[dactyl, spondee], [dactyl, spondee], [dactyl, spondee], [dactyl, spondee], [dactyl],
+             [spondee, trochee]]
+pentameter = [[dactyl, spondee], [dactyl, spondee], [l, s], [dactyl], [dactyl], [l, s]]
+pentameter_closure = [[dactyl], [dactyl], [l, s]]
+# add new line structure before this line
 known_formats = {"hexameter": hexameter, "pentameter": pentameter, "pentameter closure": pentameter_closure}
 
 
