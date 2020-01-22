@@ -19,7 +19,7 @@ python morafinder.py
 
 ## Extending by additional feet
 
-New type of feet could be added easily. `s` stands for short syllabes `l` for long ones. A comment shows where to add it.
+New type of feet could be added easily. `μ` (as mora) stands for short syllabes `-` for long ones. A comment shows where to add it.
 
 ```
 anapest = "μμ-"
