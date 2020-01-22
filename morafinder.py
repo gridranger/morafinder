@@ -2,12 +2,12 @@
 from sys import argv
 
 __author__ = 'Bárdos Dávid'
-l = "l"  # LONG
-s = "s"  # SHORT
-dactyl = "lss"
-spondee = "ll"
-trochee = "ls"
-iamb = "sl"
+l = "-"  # LONG
+s = "μ"  # SHORT
+dactyl = "-μμ"
+spondee = "--"
+trochee = "-μ"
+iamb = "μ-"
 # add new feet above this line
 hexameter = [[dactyl, spondee], [dactyl, spondee], [dactyl, spondee], [dactyl, spondee], [dactyl],
              [spondee, trochee]]
