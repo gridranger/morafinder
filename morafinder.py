@@ -2,19 +2,29 @@
 from sys import argv
 
 __author__ = 'Bárdos Dávid'
+
+# Feets
 l = "-"  # LONG
 s = "μ"  # SHORT
 dactyl = "-μμ"
+iamb = "μ-"
+pyrrich = "μμ"
 spondee = "--"
 trochee = "-μ"
-iamb = "μ-"
+iambic = [iamb, pyrrich, spondee]
 # add new feet above this line
+
+# Lines
 hexameter = [[dactyl, spondee], [dactyl, spondee], [dactyl, spondee], [dactyl, spondee], [dactyl],
              [spondee, trochee]]
 pentameter = [[dactyl, spondee], [dactyl, spondee], [l, s], [dactyl], [dactyl], [l, s]]
 pentameter_closure = [[dactyl], [dactyl], [l, s]]
+iambic_tetrameter = [iambic, iambic, iambic, [iamb], [s, ""]]
 # add new line structure before this line
-known_formats = {"hexameter": hexameter, "pentameter": pentameter, "pentameter closure": pentameter_closure}
+known_formats = {"hexameter": hexameter,
+                 "pentameter": pentameter,
+                 "pentameter closure": pentameter_closure,
+                 "iambic tetrameter": iambic_tetrameter}
 
 
 class WrongFeet(RuntimeError):
