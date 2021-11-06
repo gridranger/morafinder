@@ -112,7 +112,8 @@ class MoraFinder(object):
                         raw_feet = raw_feet.replace(feet_alternative, "", 1)
                         break
             elif len(raw_feet) < min([len(feet_alternative) for feet_alternative in feet_alternatives]):
-                raise NotEnoughFeet("Remaining feet ({}) are not enough for {}.".format(raw_feet, " or ".join(feet_alternatives)))
+                alternatives = " or ".join(feet_alternatives)
+                raise NotEnoughFeet(f"Remaining feet ({raw_feet}) are not enough for {alternatives}.\n    Parsed so far: {final_form}")
             else:
                 raise WrongFeet("None of the expected feet ({}) was found in: {}.\n    Parsed so far: {}".format(feet_alternatives, raw_feet, final_form))
         if raw_feet != "":
